@@ -1,0 +1,8 @@
+#!/bin/sh
+# Resolve the binary relative to this launcher, then preserve signals and PID.
+gateway_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd) || exit 1
+if [ ! -x "$gateway_dir/build/pi_gateway" ]; then
+    printf '%s\n' '먼저 gateway 폴더에서 빌드하세요:' 'cmake -S . -B build && cmake --build build -j2' >&2
+    exit 1
+fi
+exec "$gateway_dir/build/pi_gateway" "$@"

@@ -1,0 +1,10 @@
+build*/
+__pycache__/
+*.pyc
+
+logs/
+*.log
+*.trace
+*.pcap
+*.pcapng
+*.pid
