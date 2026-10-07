@@ -1,13 +1,13 @@
 # Raspberry Pi Edge Vision Gateway
 
-Jetson Vision Client와 WSL Final Server 사이에서 Vision / Control 메시지를 중계하는 C11 기반 TCP Gateway입니다.
+Jetson Vision Client와 WSL Validation Server 사이에서 Vision / Control 메시지를 중계하는 C11 기반 TCP Gateway입니다.
 
 ```text
 Jetson Edge Vision
         ↓ Vision
 Raspberry Pi Gateway
         ↓ Vision
-WSL Final Server
+WSL Validation Server
 
 Control: WSL → Pi → Jetson
 ```
@@ -73,4 +73,4 @@ ctest --test-dir build --output-on-failure
 ## Related Repositories
 
 - [Jetson Edge Vision](https://github.com/triton0305/jetson-edge-vision)
-- [WSL Final Server](https://github.com/triton0305/jetson-edge-vision-relay-server)
+- [Jetson Edge Vision Validation Server](https://github.com/triton0305/jetson-edge-vision-validation-server)
